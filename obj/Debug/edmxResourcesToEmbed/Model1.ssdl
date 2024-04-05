@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarOwnershipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="pkCarRegistrationNumber" />
+    </Key>
+    <Property Name="pkCarRegistrationNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="yearManufactured" Type="int" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="engineType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="fkManufacturerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarManufacturer">
+    <Key>
+      <PropertyRef Name="pkManufacturerID" />
+    </Key>
+    <Property Name="pkManufacturerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manufacturerName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="originCountry" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="yearEstablished" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarOwner">
+    <Key>
+      <PropertyRef Name="pkOwnerID" />
+    </Key>
+    <Property Name="pkOwnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ownerName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateOfBirthOrEstablishment" Type="date" Nullable="false" />
+    <Property Name="contactNumber" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="streetAddress" Type="varchar" MaxLength="30" />
+    <Property Name="city" Type="varchar" MaxLength="30" />
+    <Property Name="province" Type="varchar" MaxLength="30" />
+    <Property Name="country" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="OwnershipHistory">
+    <Key>
+      <PropertyRef Name="pkHistoryID" />
+    </Key>
+    <Property Name="pkHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datePurchased" Type="date" Nullable="false" />
+    <Property Name="dateSold" Type="date" />
+    <Property Name="fkCarRegistrationNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fkOwnerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceCenter">
+    <Key>
+      <PropertyRef Name="pkServiceCenterID" />
+    </Key>
+    <Property Name="pkServiceCenterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="serviceCenterName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="contactNumber" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="streetAddress" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="province" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceEmployee">
+    <Key>
+      <PropertyRef Name="pkEmployeeID" />
+    </Key>
+    <Property Name="pkEmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateHired" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="fkServiceCenterID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceHistory">
+    <Key>
+      <PropertyRef Name="pkServiceHistoryID" />
+    </Key>
+    <Property Name="pkServiceHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="serviceDate" Type="date" Nullable="false" />
+    <Property Name="serviceDescription" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="fkCarRegistrationNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fkServiceCenterID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Car__fkManufactu__3A81B327">
+    <End Role="CarManufacturer" Type="Self.CarManufacturer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarManufacturer">
+        <PropertyRef Name="pkManufacturerID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="fkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ownership__fkOwn__4222D4EF">
+    <End Role="Car" Type="Self.Car" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OwnershipHistory" Type="Self.OwnershipHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="pkCarRegistrationNumber" />
+      </Principal>
+      <Dependent Role="OwnershipHistory">
+        <PropertyRef Name="fkCarRegistrationNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ownership__fkOwn__4316F928">
+    <End Role="CarOwner" Type="Self.CarOwner" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OwnershipHistory" Type="Self.OwnershipHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarOwner">
+        <PropertyRef Name="pkOwnerID" />
+      </Principal>
+      <Dependent Role="OwnershipHistory">
+        <PropertyRef Name="fkOwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceEm__fkSer__4AB81AF0">
+    <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ServiceEmployee" Type="Self.ServiceEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceCenter">
+        <PropertyRef Name="pkServiceCenterID" />
+      </Principal>
+      <Dependent Role="ServiceEmployee">
+        <PropertyRef Name="fkServiceCenterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceHi__fkSer__4E88ABD4">
+    <End Role="Car" Type="Self.Car" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ServiceHistory" Type="Self.ServiceHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="pkCarRegistrationNumber" />
+      </Principal>
+      <Dependent Role="ServiceHistory">
+        <PropertyRef Name="fkCarRegistrationNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceHi__fkSer__4F7CD00D">
+    <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ServiceHistory" Type="Self.ServiceHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceCenter">
+        <PropertyRef Name="pkServiceCenterID" />
+      </Principal>
+      <Dependent Role="ServiceHistory">
+        <PropertyRef Name="fkServiceCenterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarOwnershipModelStoreContainer">
+    <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarManufacturer" EntityType="Self.CarManufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarOwner" EntityType="Self.CarOwner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OwnershipHistory" EntityType="Self.OwnershipHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceCenter" EntityType="Self.ServiceCenter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceEmployee" EntityType="Self.ServiceEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceHistory" EntityType="Self.ServiceHistory" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Car__fkManufactu__3A81B327" Association="Self.FK__Car__fkManufactu__3A81B327">
+      <End Role="CarManufacturer" EntitySet="CarManufacturer" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ownership__fkOwn__4222D4EF" Association="Self.FK__Ownership__fkOwn__4222D4EF">
+      <End Role="Car" EntitySet="Car" />
+      <End Role="OwnershipHistory" EntitySet="OwnershipHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ownership__fkOwn__4316F928" Association="Self.FK__Ownership__fkOwn__4316F928">
+      <End Role="CarOwner" EntitySet="CarOwner" />
+      <End Role="OwnershipHistory" EntitySet="OwnershipHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceEm__fkSer__4AB81AF0" Association="Self.FK__ServiceEm__fkSer__4AB81AF0">
+      <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+      <End Role="ServiceEmployee" EntitySet="ServiceEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceHi__fkSer__4E88ABD4" Association="Self.FK__ServiceHi__fkSer__4E88ABD4">
+      <End Role="Car" EntitySet="Car" />
+      <End Role="ServiceHistory" EntitySet="ServiceHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceHi__fkSer__4F7CD00D" Association="Self.FK__ServiceHi__fkSer__4F7CD00D">
+      <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+      <End Role="ServiceHistory" EntitySet="ServiceHistory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

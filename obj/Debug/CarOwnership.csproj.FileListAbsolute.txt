@@ -1,0 +1,48 @@
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\CarOwnership.exe.config
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\CarOwnership.exe
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\CarOwnership.pdb
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\EntityFramework.dll
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\EntityFramework.SqlServer.dll
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\EntityFramework.xml
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\bin\Debug\EntityFramework.SqlServer.xml
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\obj\Debug\CarOwnership.csproj.AssemblyReference.cache
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\obj\Debug\CarOwnership.csproj.CoreCompileInputs.cache
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\obj\Debug\CarOwnership.csproj.CopyComplete
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\obj\Debug\CarOwnership.exe
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership\obj\Debug\CarOwnership.pdb
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\CarOwnership.exe.config
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\CarOwnership.exe
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\CarOwnership.pdb
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\EntityFramework.dll
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.dll
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\EntityFramework.xml
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.xml
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.AssemblyReference.cache
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CoreCompileInputs.cache
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CopyComplete
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\obj\Debug\CarOwnership.exe
+F:\BCIT\SSD #29\2 - OO Development with .NET\Day 10\Solutions\CarOwnership - Code Base\obj\Debug\CarOwnership.pdb
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\CarOwnership.exe.config
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\CarOwnership.exe
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\CarOwnership.pdb
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\EntityFramework.dll
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\EntityFramework.xml
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.AssemblyReference.cache
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CoreCompileInputs.cache
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CopyComplete
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\obj\Debug\CarOwnership.exe
+C:\Users\samah\OneDrive\Desktop\SSD\OO-C#\Day10\CarOwnership - Code Base\obj\Debug\CarOwnership.pdb
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\CarOwnership.exe.config
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\CarOwnership.exe
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\CarOwnership.pdb
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\EntityFramework.dll
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\EntityFramework.xml
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.AssemblyReference.cache
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CoreCompileInputs.cache
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\obj\Debug\CarOwnership.csproj.CopyComplete
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\obj\Debug\CarOwnership.exe
+C:\Users\samah\Desktop\SSDnew\3-ooc#\CarOwnership - Samaneh\CarOwnership - Code Base\obj\Debug\CarOwnership.pdb

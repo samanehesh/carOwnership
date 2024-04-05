@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarOwnershipModelStoreContainer" CdmEntityContainer="CarOwnershipEntities1">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="CarOwnershipModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="pkCarRegistrationNumber" ColumnName="pkCarRegistrationNumber" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="yearManufactured" ColumnName="yearManufactured" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="engineType" ColumnName="engineType" />
+          <ScalarProperty Name="fkManufacturerID" ColumnName="fkManufacturerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarManufacturers">
+      <EntityTypeMapping TypeName="CarOwnershipModel.CarManufacturer">
+        <MappingFragment StoreEntitySet="CarManufacturer">
+          <ScalarProperty Name="pkManufacturerID" ColumnName="pkManufacturerID" />
+          <ScalarProperty Name="manufacturerName" ColumnName="manufacturerName" />
+          <ScalarProperty Name="originCountry" ColumnName="originCountry" />
+          <ScalarProperty Name="yearEstablished" ColumnName="yearEstablished" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarOwners">
+      <EntityTypeMapping TypeName="CarOwnershipModel.CarOwner">
+        <MappingFragment StoreEntitySet="CarOwner">
+          <ScalarProperty Name="pkOwnerID" ColumnName="pkOwnerID" />
+          <ScalarProperty Name="ownerName" ColumnName="ownerName" />
+          <ScalarProperty Name="dateOfBirthOrEstablishment" ColumnName="dateOfBirthOrEstablishment" />
+          <ScalarProperty Name="contactNumber" ColumnName="contactNumber" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="streetAddress" ColumnName="streetAddress" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OwnershipHistories">
+      <EntityTypeMapping TypeName="CarOwnershipModel.OwnershipHistory">
+        <MappingFragment StoreEntitySet="OwnershipHistory">
+          <ScalarProperty Name="pkHistoryID" ColumnName="pkHistoryID" />
+          <ScalarProperty Name="datePurchased" ColumnName="datePurchased" />
+          <ScalarProperty Name="dateSold" ColumnName="dateSold" />
+          <ScalarProperty Name="fkCarRegistrationNumber" ColumnName="fkCarRegistrationNumber" />
+          <ScalarProperty Name="fkOwnerID" ColumnName="fkOwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceCenters">
+      <EntityTypeMapping TypeName="CarOwnershipModel.ServiceCenter">
+        <MappingFragment StoreEntitySet="ServiceCenter">
+          <ScalarProperty Name="pkServiceCenterID" ColumnName="pkServiceCenterID" />
+          <ScalarProperty Name="serviceCenterName" ColumnName="serviceCenterName" />
+          <ScalarProperty Name="contactNumber" ColumnName="contactNumber" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="streetAddress" ColumnName="streetAddress" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceEmployees">
+      <EntityTypeMapping TypeName="CarOwnershipModel.ServiceEmployee">
+        <MappingFragment StoreEntitySet="ServiceEmployee">
+          <ScalarProperty Name="pkEmployeeID" ColumnName="pkEmployeeID" />
+          <ScalarProperty Name="employeeName" ColumnName="employeeName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+          <ScalarProperty Name="fkServiceCenterID" ColumnName="fkServiceCenterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceHistories">
+      <EntityTypeMapping TypeName="CarOwnershipModel.ServiceHistory">
+        <MappingFragment StoreEntitySet="ServiceHistory">
+          <ScalarProperty Name="pkServiceHistoryID" ColumnName="pkServiceHistoryID" />
+          <ScalarProperty Name="serviceDate" ColumnName="serviceDate" />
+          <ScalarProperty Name="serviceDescription" ColumnName="serviceDescription" />
+          <ScalarProperty Name="fkCarRegistrationNumber" ColumnName="fkCarRegistrationNumber" />
+          <ScalarProperty Name="fkServiceCenterID" ColumnName="fkServiceCenterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
